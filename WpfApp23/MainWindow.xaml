@@ -1,0 +1,280 @@
+﻿<Window x:Class="WpfApp23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp23"
+        mc:Ignorable="d"
+        Title="Калькулятор" Height="464" Width="267" Background="black">
+    <Grid HorizontalAlignment="Center" Width="250" Height="434" VerticalAlignment="Top">
+
+
+        <Button Name="division" Content="/" Margin="193,128,9,258" FontSize="18" Background="#FF3E0F0F" BorderBrush="#FF3A0707" Foreground="#FFEA1313" OpacityMask="#FFC93333" FontWeight="Bold" Click="division_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="#FF29CFB1"></Ellipse>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                               VerticalAlignment="Center"></Label>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="mult" Content="x" Margin="193,187,9,199" FontSize="18" FontWeight="Bold" Click="mult_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF29CFB1"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="minus" Content="-" Margin="193,248,9,138" FontSize="18" FontWeight="Bold" Click="minus_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF29CFB1"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="plus" Content="+" Margin="193,310,9,76" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Click="plus_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF29CFB1"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name ="equal" Content="=" Margin="193,371,9,15" RenderTransformOrigin="0.5,0.5" FontSize="18" FontWeight="Bold" Click="equal_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF29CFB1"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="percent" Content="%" Margin="134,128,68,258" FontSize="18" FontWeight="Bold" Click="percent_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FFB8B7B5"/>
+                        <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="nine" Content="9" Margin="134,187,68,199" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="nine_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="six" Content="6" Margin="134,248,68,138" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="six_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="three" Content="3" Margin="134,310,68,76" RenderTransformOrigin="0.5,0.5" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="three_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="point" Content="," Margin="134,371,68,15" RenderTransformOrigin="0.5,0.5" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="18" FontWeight="Bold" Click="point_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="sign" Content="+/-" Margin="76,128,126,258" Cursor="" FontSize="18" FontWeight="Bold" Click="sign_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FFB8B7B5"/>
+                        <Label Foreground="Black" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="eight" Content="8" Margin="76,187,126,199" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="eight_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label  Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="five" Content="5" Margin="76,248,126,138" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="five_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="two" Content="2" Margin="76,310,126,76" RenderTransformOrigin="0.5,0.5" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="two_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="AC" Content="AC" Margin="17,128,185,258" FontSize="18" Foreground="Red" Background="Red" FontWeight="Bold" Click="AC_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid >
+                        <Ellipse Fill="#FFB8B7B5"/>
+                        <Label Foreground="Black" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="seven"  Content="7" Margin="17,187,185,199" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"   Click="seven_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="four" Content="4" Margin="17,248,185,138" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="four_Click">
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="one" Content="1" Margin="17,310,185,76" RenderTransformOrigin="0.5,0.5" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="#FF9E0A0A" FontSize="23"  Click="one_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse Fill="#FF3E3D3C"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="zero" Content="0" Margin="10,363,116,6" RenderTransformOrigin="0.5,0.5" Background="#FFC71212" BorderBrush="#FFB80909" Foreground="Red" FontSize="23"  Click="zero_Click" >
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle Fill="#FF3E3D3C" RadiusX="20" RadiusY="20" Margin="10,10,10,10"/>
+                        <Label Foreground="White" Content="{TemplateBinding Content}" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <TextBox Name="Pole" HorizontalAlignment="Center" Margin="0,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" Height="63" Background="Black" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" FontSize="48" SelectionTextBrush="{x:Null}" FontWeight="Normal" TextAlignment="Right" />
+    </Grid>
+</Window>
